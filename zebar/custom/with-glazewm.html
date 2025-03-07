@@ -29,7 +29,7 @@
         network: { type: 'network' },
         glazewm: { type: 'glazewm' },
         cpu: { type: 'cpu' },
-        date: { type: 'date', formatting: 'EEE d MMM t' },
+        date: { type: 'date', formatting: 'EEE MMM d t' },
         battery: { type: 'battery' },
         memory: { type: 'memory' },
         weather: { type: 'weather' },
@@ -183,13 +183,6 @@
                 </div>
               )}
 
-              {output.memory && (
-                <div className="memory">
-                  <i className="nf nf-fae-chip"></i>
-                  {Math.round(output.memory.usage)}%
-                </div>
-              )}
-
               {output.cpu && (
                 <div className="cpu">
                   <i className="nf nf-oct-cpu"></i>
@@ -200,6 +193,13 @@
                   >
                     {Math.round(output.cpu.usage)}%
                   </span>
+                </div>
+              )}
+
+              {output.memory && (
+                <div className="memory">
+                  <i className="nf nf-fae-chip"></i>
+                  {Math.round(output.memory.usage)}%
                 </div>
               )}
 
@@ -217,7 +217,7 @@
               {output.weather && (
                 <div className="weather">
                   {getWeatherIcon(output.weather)}
-                  {Math.round(output.weather.celsiusTemp)}°C
+                  {Math.round(output.weather.fahrenheitTemp)}°F
                 </div>
               )}
             </div>
