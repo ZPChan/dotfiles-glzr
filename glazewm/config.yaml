@@ -48,7 +48,7 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: "45px"
+    top: "35px"
     right: "5px"
     bottom: "5px"
     left: "5px"
@@ -60,7 +60,7 @@ window_effects:
     # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#b4befe"
+      color: "#cba6f7"
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -162,7 +162,7 @@ binding_modes:
         bindings: ["j", "down"]
       # Press enter/escape to return to default keybindings.
       - commands: ["wm-disable-binding-mode --name resize"]
-        bindings: ["escape", "enter"]
+        bindings: ["escape", "enter", "alt+r"]
 
 keybindings:
   # Shift focus in a given direction.

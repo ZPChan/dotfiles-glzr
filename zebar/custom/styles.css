@@ -3,15 +3,15 @@
  * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
  */
 @import 'https://www.nerdfonts.com/assets/css/webfont.css';
+@import "mocha.css";
 
 i {
-  color: rgb(115 130 175 / 95%);
   margin-right: 7px;
 }
 
 body {
-  color: rgb(255 255 255 / 90%);
-  font-family: ui-monospace, monospace;
+  color: var(--text);
+  font-family: CaskaydiaCove Nerd Font Mono, ui-monospace, monospace;
   font-size: 12px;
   overflow: hidden;
 }
@@ -30,8 +30,7 @@ body,
 }
 
 #root {
-  border-bottom: 1px solid rgb(255 255 255 / 5%);
-  background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%));
+  background: var(--crust);
 }
 
 .app {
@@ -39,7 +38,7 @@ body,
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 100%;
-  padding: 4px 1.5vw;
+  padding: 4px 20px;
 }
 
 .left,
@@ -62,10 +61,10 @@ body,
 .tiling-direction,
 .paused-button,
 .network,
-.memory,
-.cpu,
+.hardware,
+.audio,
 .battery {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .workspaces {
@@ -73,47 +72,67 @@ body,
   align-items: center;
 }
 
-.workspace {
-  background: rgb(255 255 255 / 5%);
-  margin-right: 4px;
+.button {
   padding: 4px 8px;
-  color: rgb(255 255 255 / 90%);
   border: none;
   border-radius: 2px;
   cursor: pointer;
+  background: var(--surface0);
+  color: var(--text);
+}
+
+.workspace {
+  margin-right: 4px;
 
   &.displayed {
-    background: rgb(255 255 255 / 15%);
+    background: var(--overlay0);
   }
 
   &.focused,
   &:hover {
-    background: rgb(75 115 255 / 50%);
+    background: var(--mauve);
+    color: var(--crust);
   }
 }
 
-.binding-mode,
-.tiling-direction,
-.paused-button {
-  background: rgb(255 255 255 / 15%);
-  color: rgb(255 255 255 / 90%);
-  border-radius: 2px;
-  line-height: 1;
-  padding: 4px 8px;
-  border: 0;
-  cursor: pointer;
-}
-
 .binding-mode {
-  margin-right: 4px;
+  background: var(--mauve);
+  color: var(--crust);
 }
 
-.cpu .high-usage {
-  color: #900029;
+.paused-button {
+  background: var(--red);
+  color: var(--crust);
+}
+
+.network {
+  color: var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+}
+
+.audio {
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+}
+
+.hardware {
+  display: flex;
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+
+.cpu {
+  margin-right: 10px;
+}
+
+.high-usage {
+  color: var(--red);
 }
 
 .battery {
   position: relative;
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
 }
 
 .battery .charging-icon {
@@ -122,3 +141,9 @@ body,
   left: -8px;
   top: 3px;
 }
+
+.weather {
+  color: var(--maroon);
+  border-bottom: 2px solid var(--maroon);
+}
+
