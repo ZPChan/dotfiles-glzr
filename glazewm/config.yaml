@@ -92,7 +92,7 @@ window_effects:
       enabled: false
       style: "square"
     transparency:
-      enabled: false
+      enabled: true
       opacity: "90%"
 
 window_behavior:
