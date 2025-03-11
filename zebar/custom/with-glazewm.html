@@ -178,7 +178,10 @@
               )}
 
               {output.network && (
-                <div className="network">{getNetworkIcon(output.network)}</div>
+                <div className="network">
+                  {getNetworkIcon(output.network)}
+                  {output.network.defaultInterface?.type}
+                </div>
               )}
 
               {output.audio && (
