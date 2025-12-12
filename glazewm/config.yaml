@@ -145,6 +145,8 @@ window_rules:
         window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
       - window_process: { equals: "PowerToys" }
         window_title: { regex: ".*? - Peek" }
+      - window_title: { equals: 'Command Palette' }
+        window_class: { equals: 'WinUIDesktopWin32WindowClass' }
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper" }
       - window_title: { regex: "^ReSharper\\s*\\S\\s*" }
